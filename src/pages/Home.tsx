@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -16,7 +17,11 @@ export default function Home() {
                         <p className="text-sm text-muted-foreground">
                             Start building your new app by editing <code>src/App.tsx</code> and adding new pages.
                         </p>
-                        <Button className="w-full">Click Me</Button>
+                        <div className="flex flex-col gap-2">
+                            <Button asChild className="w-full">
+                                <Link to="/changes">View Change Management</Link>
+                            </Button>
+                        </div>
                     </div>
                 </CardContent>
             </Card>
