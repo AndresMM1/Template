@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
 import ChangeManagement from "./pages/ChangeManagement";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/contexts/theme-context";
@@ -13,7 +12,7 @@ function App() {
                 <Router>
                     <Routes>
                         <Route element={<Layout />}>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/" element={<ChangeManagement />} />
                             <Route path="/changes" element={<ChangeManagement />} />
                         </Route>
                     </Routes>
